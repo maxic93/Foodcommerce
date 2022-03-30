@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+
+/*estilos para a barra de navegacion, responsive y escritorio*/
+.container_nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+}
+
+.container_nav img {
+    height: 60px;
+    width: 100px;
+}
+
+.container_nav i {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.logo_desktop {
+    display: none;
+}
+
+.container_items {
+    width: 100%;
+    background: linear-gradient(to bottom, #F32EAB,#C42071);
+    margin-left: -100%;
+    position: absolute;
+    transition: .3s;
+    z-index: 100;
+    transition: .4s;
+}
+
+
+
+.container_items a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.container_items li {
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.show {
+    margin-left: 0;
+}
+
+/*diseño de banner slider*/
+
+.banner_container {
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner_img {
+    height: 800px;
+    width: 400%;
+    display: flex;
+    background: #000;
+    transition: .5s;
+    transform: translateX(0%);
+}
+
+.banner_img img {
+    width: calc(100% / 4);
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+}
+
+
+
+.btn_slider i {
+    padding: 0 10px;
+    color: #C7FAE3;
+    cursor: pointer;
+}
+
+.btn_slider i:active {
+    color: #fff;
+}
+
+.banner_contend {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    color: #fff;
+    z-index: 80;
+}
+
+.banner_contend h1 {
+    font-size: 4em;
+    font-family: 'Fredoka One', cursive;
+}
+
+.banner_contend p {
+    font-size: 2em;
+    font-family: 'Passion One', cursive;
+    border-radius: 10%;
+    background: linear-gradient(to bottom, #46AC99, #F32EAB);
+    width: 250px;
+    
+}
+
+.banner_contend button {
+    color: #fff;
+    background: #F32EAB;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 120px;
+    transition: .3s;
+    font-family: 'Passion One', cursive;
+    font-size: 1.2em;
+}
+
+.banner_contend button:hover {
+    background: #BB2484;
+    cursor: pointer;
+}
+
+/*media query para escritorio*/
+
+@media only screen and (min-width: 500px)  {
+    .container_nav {
+        display: none;
+    }
+    .container_items {
+        margin-left: 0;
+        display: flex;
+        list-style: none;
+        border: none;
+        background: transparent;
+        justify-content: flex-end;
+        transition: .3s;
+        height: 75px;
+    }
+
+    .show_nav_desktop {
+        position: fixed;
+        background: #000;
+    }
+    .container_items li {
+        border: none;
+        font-size: 1.2em;
+        transition: .3s;
+        margin: 20px;
+    }
+    .container_items li:hover {
+        background: #F32EAB;
+        border-radius: 10px;
+    }
+
+    .banner_contend {
+        margin-top: 20px;
+    }
+
+    .banner_contend button {
+        margin-top: 50px;
+    }
+
+    .btn_slider {
+        top: 460px;
+        left: 45%;
+    }
+    .logo_desktop {
+        display: block;
+        width: 220px;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        top: -40px;
+
+    }
+
+@media only screen and (max-width: 680px) {
+    .logo_desktop {
+        display: none;
+    }
+} 
+
+/*Seccion de donas*/
+
+}
+
+.title {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #46AC99, #33C082);
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+}
+.title h2 {
+    font-size: 3em;
+    padding: 50px;
+}
+
+.main_container {
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom,#33C082, #E8DF0E, #BB2484);
+    
+}
+
+.container_card {
+    border-radius: 10px;
+    height: 300px;
+    width: 230px;
+    margin: 20px;
+    background: linear-gradient(to bottom, #B533C0, #000);
+    color: #fff;
+    opacity: .9;
+    font-family: 'Fredoka One', cursive;
+    transition: 1s;
+    transform: translateX(-600%);
+}
+
+.container_card img {
+    width: 100%;
+    height: 150px;
+}
+
+.card_contend {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    
+}
+
+.card_contend button {
+    margin-top: 37px;
+    width: 140px;
+    padding: 7px;
+    background: #F32EAB;
+    color: #fff;
+    border: none;
+    transition: .4s;
+    border-radius: 10px;
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+.card_contend button:hover {
+    
+    cursor: pointer;
+}
+
+.card_contend button:active {
+    width: 150px;
+    height: 32px;
+    cursor: pointer;
+    background: #470933;
+}
+
+.card_contend h3 {
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+.card_contend p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/*estilos para section carrito de compras*/
+
+.show_carrito {
+    height: 80px;
+    width: 250px;
+    position: fixed;
+    top: 80px;
+    background: linear-gradient(to bottom, #fff,#C5C1C3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    z-index: 300;
+}
+
+.show_carrito h4 {
+    font-size: 1.2em;
+    color: #BB2484;
+    font-family: 'Fredoka One', cursive;
+}
+
+.show_carrito i {
+    color: #2BC84F;
+}
+
+.title_carrito {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+   
+}
+
+.title_carrito i {
+    padding: 4px;
+    color: #fff;
+}
+
+.section_carrito {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 30px;
+    background: linear-gradient(to bottom, #BB2484, #1C0417);
+}
+
+.carrito_container {
+    background: linear-gradient(to bottom, #fff, #C5C1C3);
+    width: 60%;
+    border-radius: 20px;
+    
+}
+
+.container_titles {
+    width:60%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #fff, #C5C1C3);
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.container_titles h3 {
+    color: #000;
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+.titles2 {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.row {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #EFF7F1,#626663);
+    height: 80px;
+    margin: 15px 0;
+    opacity: .8;
+    width: 97%;
+    margin-left: 10px;
+}
+
+.row img {
+    width: 90px;
+    height: 80px;
+    
+}
+
+.row_content {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.row_content h4 {
+    font-size: 1.5em;
+    margin-right: 80px;
+    color: #fff;
+}
+
+.row_content input {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #F10D97,#FF099E, #111);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Fredoka One', cursive;
+}
+
+.cantidad_delete {
+    margin-left: -40px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cantidad_delete button {
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    background: linear-gradient(to bottom, #F10D97,#FF099E, #111);
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .6s;
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+.cantidad_delete button:hover {
+    background: #F10D14;
+}
+
+@media only screen and (max-width: 500px) {
+    .carrito_container {
+        width: 100%;
+    }
+    .container_titles {
+        width: 100%;
+    }
+    .row {
+        margin-left: 5px;
+    }
+} 
+
+/*estilos para el total*/
+
+.container_total {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.container_total h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.container_total button {
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    background: linear-gradient(to bottom, #F10D97,#FF099E, #64104A);
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container_total button:active {
+    padding: 8px;
+    background: #1C0417;
+}
+
+
+/*footer con info de contacto*/
+
+.footer {
+    
+    height: 170px;
+    width: 100%;
+    background: #111;
+}
+
+.container_redes {
+    color: #fff;
+    padding: 20px;
+}
+
+.container_redes i {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.8em;
+    color: #F32EAB;
+    transition: .4s;
+}
+
+.container_redes i:hover {
+    color: #BB2484;
+}
+
+.derechos {
+    color: #fff;
+    margin-left: 20px;
+}
